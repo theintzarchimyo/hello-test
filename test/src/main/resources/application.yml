@@ -1,11 +1,16 @@
 spring:
   application:
     name: test
+
   datasource:
-    url: jdbc:postgresql://localhost:5432/mydb
-    username: julian
-    password: 
+    url: jdbc:postgresql://postgres:5432/mydb
+    username: postgres
+    password: password
     driver-class-name: org.postgresql.Driver
+
+  sql:
+    init:
+      mode: always
 
 mybatis:
   type-aliases-package: com.example.test.model

@@ -22,7 +22,7 @@ public interface DepartmentMapper {
     @Select("SELECT * FROM department WHERE department_name = #{departmentName}")
     Department getDepartmentByName(String departmentName);
 
-    @Insert("INSERT INTO department(departpment_name, position) VALUES(#{departmentName}, #{position})")
+    @Insert("INSERT INTO department(department_name, position) VALUES(#{departmentName}, #{position})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     int insertDepartment(Department department);
 
