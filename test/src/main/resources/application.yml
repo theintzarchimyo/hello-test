@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: test
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/mydb
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  sql:
+    init:
+      mode: always
+
+mybatis:
+  type-aliases-package: com.example.test.model
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.example.test.mapper: debug
+    org.mybatis: debug
