@@ -11,3 +11,6 @@ CREATE TABLE IF NOT EXISTS department (
     department_name VARCHAR(255),
     position VARCHAR(255)
 );
+
+ALTER TABLE users
+ADD COLUMN IF NOT EXISTS department_id INTEGER;

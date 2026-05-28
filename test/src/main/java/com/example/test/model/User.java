@@ -12,6 +12,8 @@ public class User {
     private String name;
     private String address;
     private String phoneNumber;
+    private Integer departmentId;
+    private Department department;
 	public Long getId() {
 		return id;
 	}
@@ -35,5 +37,17 @@ public class User {
 	}
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+	public Integer getDepartmentId() {
+		return departmentId;
+	}
+	public void setDepartmentId(Integer departmentId) {
+		this.departmentId = departmentId;
+	}
+	public Department getDepartment() {
+		return department;
+	}
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 }

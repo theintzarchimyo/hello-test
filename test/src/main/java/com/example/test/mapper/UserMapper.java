@@ -22,11 +22,11 @@ public interface UserMapper {
     @Select("SELECT * FROM users WHERE name = #{name}")
     User getUserByName(String name);
 
-    @Insert("INSERT INTO users(name, address, phone_number) VALUES(#{name}, #{address}, #{phoneNumber})")
+    @Insert("INSERT INTO users(name, address, phone_number,department_id) VALUES(#{name}, #{address}, #{phoneNumber}, #{departmentId})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     int insertUser(User user);
 
-    @Update("UPDATE users SET name=#{name}, address=#{address}, phone_number=#{phoneNumber} WHERE id=#{id}")
+    @Update("UPDATE users SET name=#{name}, address=#{address}, phone_number=#{phoneNumber}, deaprtment_id=#{departmentId} WHERE id=#{id}")
     int updateUser(User user);
 
     @Delete("DELETE FROM users WHERE id = #{id}")
